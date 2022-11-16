@@ -3,6 +3,7 @@
 This is a simple java program I created to practice Java GUI (Java Swing) and Java Database Connectivity.
 
 #Instructions to follow
+
 **- To Create MySQL Databse Run The Following Queries:**
 - CREATE DATABASE students_data;
 - USE students_data;
