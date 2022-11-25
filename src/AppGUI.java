@@ -19,20 +19,20 @@ import com.toedter.calendar.JDateChooser;
 
 public class AppGUI {
 	
-	static String nameValue;
-	static String DOBValue;
-	static String genderValue;
-	static String mobileNumberValue;
-	static String departmentValue;
-	static String emailValue;
+	String nameValue;
+	String DOBValue;
+	String genderValue;
+	String mobileNumberValue;
+	String departmentValue;
+	String emailValue;
 	
-	static InnerContainer nameContainer;
-	static InnerContainer mobileNumContainer;
-	static InnerContainer emailContainer;
-	static JDateChooser dateChooser;
-	static JComboBox<String> departmentList;
+	InnerContainer nameContainer;
+	InnerContainer mobileNumContainer;
+	InnerContainer emailContainer;
+	JDateChooser dateChooser;
+	JComboBox<String> departmentList;
 	
-	public static JFrame appMain() {
+	public JFrame appMain() {
 		
 		ImageIcon imgIcon = new ImageIcon("images\\icon.png");
 		JPanel outterContainer = new JPanel();
@@ -152,14 +152,14 @@ public class AppGUI {
 		return frame;
 	}
 	
-	public static JLabel creatLabel(String labelTitle) {
+	public JLabel creatLabel(String labelTitle) {
 		JLabel label = new JLabel();
 		label.setText(labelTitle);
 		label.setPreferredSize(new Dimension(150,14));
 		return label;
 	}
 
-	public static void addToDatabase() throws Exception {
+	public void addToDatabase() throws Exception {
 
 		nameValue = nameContainer.textField.getText();
 		mobileNumberValue = mobileNumContainer.textField.getText();
@@ -196,6 +196,7 @@ public class AppGUI {
 	}
 	
 	public static void main(String[] args) {
-		AppGUI.appMain();
+		AppGUI app = new AppGUI();
+		app.appMain();
 	}
 }
